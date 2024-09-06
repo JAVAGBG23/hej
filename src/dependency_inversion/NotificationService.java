@@ -9,6 +9,10 @@ public class NotificationService {
         this.smsService = smsService;
     }
 
+    public void hej() {
+        System.out.println("hej");
+    }
+
     public void sendNotification(String message){
         emailService.sendMessage(message);
         smsService.sendSMS(message);

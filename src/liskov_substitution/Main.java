@@ -1,4 +1,4 @@
-package liskov_substitution;
+﻿package liskov_substitution;
 
 public class Main {
     public static void main(String[] args) {
