@@ -1,6 +1,6 @@
 package interface_segregation;
 
-public class MultiFunctionDevice implements IMachine{
+public class MultiFunctionDevice implements IPrinter, IScan, IFax{
     @Override
     public void print(Document document) {
         System.out.println("Printing document " + document.getContent());

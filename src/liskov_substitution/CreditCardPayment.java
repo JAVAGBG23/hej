@@ -1,10 +1,11 @@
 package liskov_substitution;
 
-public class CreditCardPayment extends Payment {
+public class CreditCardPayment implements Payment {
     private String cardNumber;
+    private double amount;
 
     public CreditCardPayment(double amount, String cardNumber) {
-        super(amount);
+        this.amount = amount;
         this.cardNumber = cardNumber;
     }
 
@@ -12,9 +13,14 @@ public class CreditCardPayment extends Payment {
         return cardNumber;
     }
 
+
     @Override
     public void processPayment() {
-        // specifik logik för kreditkort
-        System.out.println("Processing credit card payment of amount: " + amount + " with card number: " + cardNumber);
+        System.out.println("Processing payment for credit card " + amount + " card number: " + cardNumber);
+    }
+
+    @Override
+    public double getAmount() {
+        return amount;
     }
 }

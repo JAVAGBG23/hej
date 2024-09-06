@@ -1,7 +1,9 @@
 package dependency_inversion;
 
-class SMSService {
-    public void sendSMS(String message) {
+class SMSService implements MessageService{
+
+    @Override
+    public void sendMessage(String message) {
         System.out.println("Sending SMS with message " + message);
     }
 }
